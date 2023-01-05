@@ -6,6 +6,9 @@ import clsx from 'clsx'
 import { ButtonLink } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
+import Image from "next/image";
+import myLogo from "../../public/images/FeesManagerLogo.png"
+
 
 function MobileNavigation() {
   return (
@@ -95,7 +98,7 @@ function MobileNavigation() {
   )
 }
 
-export function Header() {
+export function Header(props) {
   return (
     <header className="py-10">
       <Container>
@@ -105,9 +108,10 @@ export function Header() {
               <Link href="#">
                 <a>
                   <span className="sr-only">Home</span>
-                  <span className='text-2xl font-bold '>  Fees</span>
+                  <Image src={myLogo} alt="fess manager logo" width="100%" height="100%"/>
 
-                  <span className='text-xl font-bold text-blue-600'>  Manager</span>
+                  {/* <span className='text-2xl font-bold '>  Fees</span> */}
+                  {/* <span className='text-xl font-bold text-blue-600'>  Manager</span> */}
                 </a>
               </Link>
             </li>
@@ -135,14 +139,14 @@ export function Header() {
             <li className="ml-auto hidden md:block">
               <Link href="/login">
                 <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  Sign in
+                  {/* Sign in */}
                 </a>
               </Link>
             </li>
             <li className="ml-auto md:ml-8">
               <ButtonLink href="/register" color="blue">
                 <span>
-                  Get started<span className="hidden lg:inline"> today</span>
+                  Get your software<span className="hidden lg:inline"> today</span>
                 </span>
               </ButtonLink>
             </li>

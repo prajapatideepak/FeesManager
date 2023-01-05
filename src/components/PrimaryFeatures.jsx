@@ -5,34 +5,35 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import screenshotExpenses from '@/images/screenshots/3.png'
+import screenshotPayroll from '@/images/screenshots/2.png'
+import screenshotReporting from '@/images/screenshots/1.png'
+import screenshotVatReturns from '@/images/screenshots/4.png'
+
 
 const features = [
   {
-    title: 'Payroll',
+    title: 'Student Management',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+      "You can register students and can manage according to their class.",
     image: screenshotPayroll,
   },
   {
-    title: 'Claim expenses',
+    title: 'Fees Management',
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      "You can collect fees and manage fees. You can track how much has been paid and how much is due.",
     image: screenshotExpenses,
   },
   {
-    title: 'VAT handling',
+    title: 'Staff Salary Management',
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
+      "You can manage your staff details and salary.",
     image: screenshotVatReturns,
   },
   {
-    title: 'Reporting',
+    title: 'Report',
     description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
+      'You can track date wise, monthly and yearly total transactions and fees collection.',
     image: screenshotReporting,
   },
 ]
@@ -77,11 +78,10 @@ export function PrimaryFeatures() {
             id="features-title"
             className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl"
           >
-            Everything you need to run your books.
+            We provide everything you need to manage your student's fees.
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Well everything you need if you aren’t that picky about minor
-            details like tax compliance.
+          It's easy to use, and it's Very Cheap! fees collection software.
           </p>
         </div>
         <Tab.Group

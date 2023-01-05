@@ -106,45 +106,50 @@ export function Pricing() {
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
-            name="Starter"
-            price="$9"
-            description="Good for anyone who is self-employed and just getting started."
+            name="Basic"
+            price="&#8377; 299"
+            description="Good for anyone who has less than 100 students."
             href="/register"
             features={[
-              'Send 10 quotes and invoices',
-              'Connect up to 2 bank accounts',
-              'Track up to 15 expenses per month',
-              'Manual payroll support',
-              'Export up to 3 reports',
+              'Register multiple classes',
+              'Automatic reciept generation',
+              "Store multiple year's of fees data",
+              'Track staff salary',
+              "Automatic email notification to student's",
+              'Export fess reports, student data, class data',
             ]}
           />
           <Plan
             featured
-            name="Small business"
-            price="$15"
-            description="Perfect for small / medium sized businesses."
+            name="Medium"
+            price="&#8377; 399"
+            description="Perfect for tuition classes who have more than 100+ student's."
             href="/register"
             features={[
-              'Send 25 quotes and invoices',
-              'Connect up to 5 bank accounts',
-              'Track up to 50 expenses per month',
-              'Automated payroll support',
-              'Export up to 12 reports',
-              'Bulk reconcile transactions',
-              'Track in multiple currencies',
+              "Unlimited student's",
+              'Two branch supported',
+              'Register multiple classes',
+              'Automatic reciept generation',
+              "Store multiple year's of fees data",
+              'Track staff salary',
+              "Automatic email notification to student's",
+              'Export fess reports, student data, class data',
             ]}
           />
           <Plan
             name="Enterprise"
-            price="$39"
-            description="For even the biggest enterpise companies."
+            price="&#8377; 699"
+            description="Perfect for tuition classes who want unlimited access"
             href="/register"
             features={[
-              'Send unlimited quotes and invoices',
-              'Connect up to 15 bank accounts',
-              'Track up to 200 expenses per month',
-              'Automated payroll support',
-              'Export up to 25 reports, including TPS',
+              "Unlimited student's",
+              'Multiple branch supported',
+              'Register multiple classes',
+              'Automatic reciept generation',
+              "Store multiple year's of fees data",
+              'Track staff salary',
+              "Automatic email notification to student's",
+              'Export fess reports, student data, class data',
             ]}
           />
         </div>

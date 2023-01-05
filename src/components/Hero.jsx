@@ -46,7 +46,7 @@ Fees Manager is the only tool you need to collect and manage student fees.
           <span className="ml-3">Watch video</span>
         </ButtonLink>
       </div>
-      <div className="mt-36 lg:mt-44">
+      {/* <div className="mt-36 lg:mt-44">
         <p className="font-display text-base text-slate-900">
           Trusted by these classes so far
         </p>
@@ -103,7 +103,7 @@ Fees Manager is the only tool you need to collect and manage student fees.
             </ul>
           </li>
         </ul>
-      </div>
+      </div> */}
     </Container>
   )
 }

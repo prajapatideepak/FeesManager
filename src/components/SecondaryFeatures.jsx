@@ -4,9 +4,9 @@ import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import screenshotContacts from '@/images/screenshots/contacts.png'
-import screenshotInventory from '@/images/screenshots/inventory.png'
-import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
+import screenshotContacts from '@/images/screenshots/Untitleddesign.png'
+import screenshotInventory from '@/images/screenshots/Untitleddesign.png'
+import screenshotProfitLoss from '@/images/screenshots/Untitleddesign.png'
 
 const features = [
   {
@@ -156,7 +156,7 @@ function FeaturesDesktop() {
     <Tab.Group as="div" className="hidden lg:mt-20 lg:block">
       {({ selectedIndex }) => (
         <>
-          <Tab.List className="grid grid-cols-3 gap-x-8">
+          {/* <Tab.List className="grid grid-cols-3 gap-x-8">
             {features.map((feature, featureIndex) => (
               <Feature
                 key={feature.name}
@@ -173,7 +173,7 @@ function FeaturesDesktop() {
                 className="relative"
               />
             ))}
-          </Tab.List>
+          </Tab.List> */}
           <Tab.Panels className="relative mt-20 overflow-hidden rounded-4xl bg-slate-200 px-14 py-16 xl:px-16">
             <div className="-mx-5 flex">
               {features.map((feature, featureIndex) => (
@@ -221,11 +221,10 @@ export function SecondaryFeatures() {
             id="secondary-features-title"
             className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
           >
-            Simplify everyday business tasks.
+            Simplify fees transactions.
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Because you’d probably be a little confused if we suggested you
-            complicate your everyday business tasks instead.
+          The Timeless Tally of Tuition: A Comprehensive Compilation of Fees.
           </p>
         </div>
         <FeaturesMobile />
