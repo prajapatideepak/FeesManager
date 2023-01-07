@@ -1,34 +1,60 @@
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
 import Head from 'next/head'
 import Link from 'next/link'
-
 import { AuthLayout } from '@/components/AuthLayout'
 import { Input } from '@/components/Input'
 import { Logo } from '@/components/Logo'
+import Image from "next/image";
+import myLogo from "../../public/images/FeesManagerLogo.png"
+
 
 export default function Login() {
+
+  const form = useRef();
+
+  const Sendmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm("service_w6skjso","template_468riwt",form.current,"dYZGJ37pa39lKSSRf")
+        .then(res => {
+            console.log(res, "res")
+            document.getElementById('first_name').value = ' '
+            document.getElementById('last_name').value = ' '
+            document.getElementById('email').value = ' '
+            document.getElementById('message').value = ' '
+        }).catch(err => {
+            console.log("error", err)
+        })
+}
+
   return (
     <>
       <Head>
-        <title>Sign Up - TaxPal</title>
+        <title>Fees Manager - Accounting made simple for Tuition classes</title>
       </Head>
       <AuthLayout>
         <div className="flex flex-col items-start justify-start">
           <Link href="/">
             <a>
-              <Logo className="mb-2 h-10 w-auto" />
+              {/* <Logo className="mb-2 h-10 w-auto" /> */}
+              <Image src={myLogo} alt="fess manager logo" width="100%" height="100%"/>
             </a>
           </Link>
-          <h2 className="mt-16 text-lg font-semibold text-gray-900">
-            Get started for free.
+          <h2 className="mt-5 text-lg font-semibold text-gray-900">
+            Get your fess collection software.
           </h2>
           <p className="mt-2 text-sm text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus arcu
-            odio pretium, semper adipiscing vitae nulla.
+          Our fees management application aims to streamline the process of collecting and tracking fees for organizations or tuition classes. With our application, users will be able to easily set up fee structures, send invoices and payment reminders, and track payments in real-time.
           </p>
+
+          <h2 className="mt-5 text-lg font-semibold text-gray-900">
+            Call Now: <span className='font-medium'>9328027580</span>
+          </h2>
+
         </div>
         <div className="mt-10">
           <div className="mt-6">
-            <form action="#" method="" className="space-y-7">
+            <form action="#" method="" className="space-y-7"  ref={form} onSubmit={Sendmail}>
               <div className="flex flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-6">
                 <Input
                   label="First name"
@@ -56,19 +82,19 @@ export default function Login() {
                 required
               />
               <Input
-                label="Password"
-                id="password"
-                name="password"
-                type="password"
-                autoComplete="new-password"
+                label="Message"
+                id="message"
+                name="message"
+                type="message"
                 required
               />
               <div className="pt-1">
                 <button
                   type="submit"
+                  value="Send" 
                   className="w-full rounded-full border border-transparent bg-blue-600 py-2 px-4 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  Sign up <span aria-hidden="true">&rarr;</span>
+                  Submit <span aria-hidden="true">&rarr;</span>
                 </button>
               </div>
             </form>
